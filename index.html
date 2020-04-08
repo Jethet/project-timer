@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timer</title>
+</head>
+
+<body>
+  <div id="show-time">
+    <h1>Timer</h1>
+    <div>
+      <h2>Current time: <span id="current-time"></span></h2>
+    </div>
+    <div>
+      <label for="minutes">
+        <h2>Set the timer in minutes:</h2>
+      </label>
+      <input type="number" id="number" name="number" required minlength="1" placeholder="Enter minutes">
+      <button id="start-button">Start</button>
+    </div>
+    <div>
+      <h2>Time elapsed: 
+        <label id="hours-passed">00</label> :
+        <label id="minutes-passed">00</label> :
+        <label id="seconds-passed">00</label>
+      </h2>
+      <button id="reset-button">Reset</button>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="app.js"></script>
+</body>
+
+</html>
+
+<!-- WHY DOES INPUT HAVE ID AND NAME? -->
