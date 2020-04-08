@@ -42,8 +42,9 @@ function runTime() {
       let totalMinutes = 0;
       let totalSeconds = 0;
       totalHours = Math.floor(runSeconds / 3600);
-      totalMinutes = Math.floor(totalSeconds - (totalHours * 3600) / 60);
-      totalSeconds = runSeconds - (totalHours * 3600 + totalMinutes * 60);
+      runSeconds %= 3600;
+      totalMinutes = Math.floor(runSeconds / 60);
+      totalSeconds = runSeconds % 60;
       totalHours = formatTime(totalHours);
       totalMinutes = formatTime(totalMinutes);
       totalSeconds = formatTime(totalSeconds);
@@ -52,22 +53,20 @@ function runTime() {
       document.querySelector("#seconds-passed").innerHTML = totalSeconds;
     }
     if (runSeconds === input.value * 60) {
-      input.value = ""; // need to set input value back to empty somewhere
-      totalSeconds = 0;
       alert("The set time has elapsed");
-
       clearInterval(countDown);
+      input.value = ""; // need to set input value back to empty somewhere
     }
   }, 1000);
+
+  let resetButton = document.querySelector("#reset-button");
+  resetButton.addEventListener("click", function (e) {
+    e.preventDefault();
+    clearInterval(countDown)
+    document.querySelector("#hours-passed").innerHTML = formatTime(0);
+    document.querySelector("#minutes-passed").innerHTML = formatTime(0);
+    document.querySelector("#seconds-passed").innerHTML = formatTime(0);
+  });
 }
-
-let resetButton = document.querySelector("#reset-button");
-
-resetButton.addEventListener("click", function (e) {
-  e.preventDefault();
-  document.querySelector("#hours-passed").innerHTML = formatTime(0);
-  document.querySelector("#minutes-passed").innerHTML = formatTime(0);
-  document.querySelector("#seconds-passed").innerHTML = formatTime(0);
-});
 
 startTime();
