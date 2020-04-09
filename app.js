@@ -34,7 +34,6 @@ startButton.addEventListener("click", function (e) {
 
 function runTime() {
   let runSeconds = 0;
-
   let countDown = setInterval(() => {
     if (runSeconds < input.value * 60) {
       ++runSeconds;
@@ -53,16 +52,25 @@ function runTime() {
       document.querySelector("#seconds-passed").innerHTML = totalSeconds;
     }
     if (runSeconds === input.value * 60) {
-      alert("The set time has elapsed");
       clearInterval(countDown);
+      play();
       input.value = ""; // need to set input value back to empty somewhere
     }
   }, 1000);
 
+  function play() {
+    let alertSound;
+    alertSound = new Audio("./audio/windchimes.wav");
+    alertSound.play();
+    setTimeout(function () {
+      alert("The set time has elapsed");
+    }, 1000);
+  }
+
   let resetButton = document.querySelector("#reset-button");
   resetButton.addEventListener("click", function (e) {
     e.preventDefault();
-    clearInterval(countDown)
+    clearInterval(countDown);
     document.querySelector("#hours-passed").innerHTML = formatTime(0);
     document.querySelector("#minutes-passed").innerHTML = formatTime(0);
     document.querySelector("#seconds-passed").innerHTML = formatTime(0);
