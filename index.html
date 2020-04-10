@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/recurso-sans" type="text/css"/> 
   <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/gnu-unifont" type="text/css"/> 
   <link rel="stylesheet" href="style.css">
   <title>Timer</title>
@@ -27,9 +28,11 @@
           <h3>Set your timer in minutes:</h3>
         </label>
         <div class="timer-input">
+          <form>
           <input type="number" id="number" name="number" placeholder="Enter minutes" autocomplete="off">
           <button id="start-button">Start</button>
-          <button id="reset-button">Reset</button>
+          <input type="reset" value="Reset" id="reset-button">
+        </form>
         </div>
       </div>
 

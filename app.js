@@ -40,10 +40,12 @@ function runTime() {
       let totalHours = 0;
       let totalMinutes = 0;
       let totalSeconds = 0;
+
       totalHours = Math.floor(runSeconds / 3600);
-      runSeconds %= 3600;
-      totalMinutes = Math.floor(runSeconds / 60);
-      totalSeconds = runSeconds % 60;
+      // runSeconds %= 3600;
+      totalMinutes = Math.floor(runSeconds - (totalHours * 3600) / 60);
+      totalSeconds = runSeconds - (totalHours * 3600) - (totalMinutes * 60);
+      totalSeconds = Math.round(seconds * 100) / 100
       totalHours = formatTime(totalHours);
       totalMinutes = formatTime(totalMinutes);
       totalSeconds = formatTime(totalSeconds);
