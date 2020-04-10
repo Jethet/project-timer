@@ -1,33 +1,43 @@
 .timer {
-  margin-left: 10px;
-  margin-top: 10px;
+  display: flex;
+  justify-content: center;
 }
 
 .timer-body {
-  max-width: 35vh;
-  max-height: auto;
+  min-width: 200px;
+  min-height: auto;
   background-color: aqua;
-  padding: 25px 10px 25px 10px;
+  padding: 25px 35px;
   border-radius: 50%;
 }
 
 #hourglass {
-  max-width: 4vh;
-  max-height: 4vh;
+  max-width: auto;
+  max-height: 30px;
   padding-top: 10px;
+  padding-left: 5px;
 }
 
 #timer-header {
   display: flex;
   justify-content: center;
   margin: 0;
-
 }
 
 .timer-current {
   display: flex;
   justify-content: center;
   margin: 0;
+}
+
+#current-time {
+  padding: 2px;
+  background-color: azure;
+  margin-left: 4px;
+  border-radius: 4%;
+  font-family: "UnifontMedium";
+  font-weight: normal;
+  font-style: normal;
 }
 
 .timer-setting h3 {
@@ -38,15 +48,28 @@
 .timer-input {
   display: flex;
   justify-content: center;
-
 }
 
 #number {
-  max-width: 15vh;
+  width: 90px;
+}
+
+button {
+  margin-left: 2px;
 }
 
 .show-time {
   display: flex;
   justify-content: center;
   padding-bottom: 20px;
+}
+
+#time-elapsed {
+  padding: 2px;
+  background-color: azure;
+  margin-left: 1px;
+  border-radius: 4%;
+  font-family: "UnifontMedium";
+  font-weight: normal;
+  font-style: normal;
 }

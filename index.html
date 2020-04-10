@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/gnu-unifont" type="text/css"/> 
   <link rel="stylesheet" href="style.css">
   <title>Timer</title>
 </head>
@@ -23,20 +24,19 @@
 
       <div class="timer-setting">
         <label for="number">
-          <h3>Set the timer in minutes:</h3>
+          <h3>Set your timer in minutes:</h3>
         </label>
         <div class="timer-input">
-          <input type="number" id="number" name="number" placeholder="Enter minutes">
+          <input type="number" id="number" name="number" placeholder="Enter minutes" autocomplete="off">
           <button id="start-button">Start</button>
           <button id="reset-button">Reset</button>
         </div>
       </div>
 
       <div class="show-time">
-        <h3>Time elapsed:
-          <label id="hours-passed">00</label> :
-          <label id="minutes-passed">00</label> :
-          <label id="seconds-passed">00</label>
+        <h3>Time elapsed: <span id="time-elapsed">
+            <label id="hours-passed">00</label>:<label id="minutes-passed">00</label>:<label id="seconds-passed">00</label>
+          </span>
         </h3>
       </div>
     </div>
