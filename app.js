@@ -66,6 +66,7 @@ function runTime() {
     setTimeout(function () {
       alert("The set time has elapsed");
     }, 1000);
+    }
   }
 
   let resetButton = document.querySelector("#reset-button");
@@ -77,6 +78,6 @@ function runTime() {
     document.querySelector("#minutes-passed").innerHTML = formatTime(0);
     document.querySelector("#seconds-passed").innerHTML = formatTime(0);
   });
-}
+
 
 startTime();
