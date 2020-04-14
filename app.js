@@ -71,14 +71,13 @@ function runTime() {
   }
 }
 
-let resetButton = document.querySelector("#reset-button");
-resetButton.addEventListener("click", function (e) {
-  e.preventDefault();
+document.querySelector("#reset-button").addEventListener("click", function (e) {
   clearInterval(countDown);
   document.querySelector("#number").value = "";
   document.querySelector("#hours-passed").innerHTML = formatTime(0);
   document.querySelector("#minutes-passed").innerHTML = formatTime(0);
   document.querySelector("#seconds-passed").innerHTML = formatTime(0);
+  e.preventDefault();
 });
 
 startTime();
