@@ -32,6 +32,11 @@ startButton.addEventListener("click", function (e) {
   }
 });
 
+startButton.addEventListener("click", function (e) {
+  e.preventDefault();
+  timerTab();
+});
+
 function runTime() {
   let runSeconds = 0;
   let countDown = setInterval(() => {
@@ -53,11 +58,12 @@ function runTime() {
       document.querySelector("#hours-passed").innerHTML = totalHours;
       document.querySelector("#minutes-passed").innerHTML = totalMinutes;
       document.querySelector("#seconds-passed").innerHTML = totalSeconds;
+      document.title = totalHours + ":" + totalMinutes + ":" + totalSeconds;
     }
     if (runSeconds === input.value * 60) {
       clearInterval(countDown);
       play();
-      input.value = ""; // need to set input value back to empty somewhere
+      input.value = "";
     }
   }, 1000);
 
@@ -68,6 +74,8 @@ function runTime() {
     setTimeout(function () {
       alert("The set time has elapsed");
     }, 1000);
+    // setTimeout(() => {
+    //   alertSound.remove()}, 3000)
   }
 }
 
@@ -79,5 +87,19 @@ document.querySelector("#reset-button").addEventListener("click", function (e) {
   document.querySelector("#seconds-passed").innerHTML = formatTime(0);
   e.preventDefault();
 });
+
+let colourButton = document.querySelector(".colour-button")
+colourButton.addEventListener("click", function (e) {
+  e.preventDefault()
+  changeBackground()
+})
+
+function changeBackground(){
+  // if(document.querySelector('.timer-body').style.background === 'aqua') {
+  //   document.querySelector('.timer-body').style.background === 'red'
+  // } else {
+    document.querySelector('.timer-body').style.background === 'red'
+  // }
+}
 
 startTime();
