@@ -64,7 +64,7 @@
   font-family: inherit;
 }
 
-.colour-button {
+.color-button {
   font-family: inherit;
   display: flex;
   justify-content: center;
@@ -88,12 +88,3 @@
   font-style: normal;
 }
 
-/* .colour-button {
-  display: flex;
-  justify-content: center;
-  margin: auto;
-  font-family: "RecursoSansRegular";
-  font-weight: normal;
-  font-style: normal;
-  font-size: 10px;
-} */

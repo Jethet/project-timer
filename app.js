@@ -88,18 +88,20 @@ document.querySelector("#reset-button").addEventListener("click", function (e) {
   e.preventDefault();
 });
 
-let colourButton = document.querySelector(".colour-button")
-colourButton.addEventListener("click", function (e) {
-  e.preventDefault()
+let colorButton = document.querySelector(".color-button")
+colorButton.addEventListener("click", function (e) {
   changeBackground()
+  e.preventDefault()
 })
 
-function changeBackground(){
-  // if(document.querySelector('.timer-body').style.background === 'aqua') {
-  //   document.querySelector('.timer-body').style.background === 'red'
-  // } else {
-    document.querySelector('.timer-body').style.background === 'red'
-  // }
+function changeBackground() {
+  let body = document.querySelector('.timer-body')
+  let color = 'aqua'
+  if(color === '87CDFA') {
+    body.style.background = 'aqua'
+  } else {
+    body.style.background = '#87CDFA'
+  }
 }
 
 startTime();
