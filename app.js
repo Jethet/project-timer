@@ -96,11 +96,11 @@ colorButton.addEventListener("click", function (e) {
 
 function changeBackground() {
   let body = document.querySelector('.timer-body')
-  let color = 'aqua'
-  if(color === '87CDFA') {
-    body.style.background = 'aqua'
+  let color = ''
+  if(color === '#AFDCFB') {
+    body.style.backgroundColor = '#05E3EE'
   } else {
-    body.style.background = '#87CDFA'
+    body.style.backgroundColor = '#AFDCFB'
   }
 }
 
