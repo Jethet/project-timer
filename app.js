@@ -91,6 +91,8 @@ document.querySelector("#reset-button").addEventListener("click", function (e) {
 });
 
 // Add button with event listener, plus function to change background color
+let body = document.querySelector('.timer-body')
+let toggleButton = false
 let colorButton = document.querySelector(".color-button")
 colorButton.addEventListener("click", function (e) {
   changeBackground()
@@ -98,12 +100,9 @@ colorButton.addEventListener("click", function (e) {
 })
 
 function changeBackground() {
-  let body = document.querySelector('.timer-body')
-  console.log(body);
-  
-  if(body.style.background === '#AFDCFB') {
+  toggleButton = !toggleButton
+  if(toggleButton) {
     body.style.background = '#05E3EE'
-   
   } else {
     body.style.background = '#AFDCFB'
   }
