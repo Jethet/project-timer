@@ -76,7 +76,7 @@ function runTime() {
     alertSound.play();
     setTimeout(function () {
       alert("The set time has elapsed");
-    }, 1000);
+    }, 500);
   }
 }
 
