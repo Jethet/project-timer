@@ -28,12 +28,12 @@ let input = document.querySelector("#number");
 
 startButton.addEventListener("click", function (e) {
   e.preventDefault();
-  startButton.disabled = false
+  startButton.disabled = false;
   if (input.value === "") {
     alert("Please enter the number of minutes");
   } else {
     runTime();
-    startButton.disabled = true
+    startButton.disabled = true;
   }
 });
 
@@ -77,6 +77,9 @@ function runTime() {
     setTimeout(function () {
       alert("The set time has elapsed");
     }, 500);
+    setTimeout(function () {
+      alert("Icon made by Flat Icons from www.flaticon.com")
+    }, 1000)
   }
 }
 
@@ -91,21 +94,47 @@ document.querySelector("#reset-button").addEventListener("click", function (e) {
 });
 
 // Add button with event listener, plus function to change background color
-let body = document.querySelector('.timer-body')
-let toggleButton = false
-let colorButton = document.querySelector(".color-button")
+let body = document.querySelector(".timer-body");
+let toggleButton = false;
+let colorButton = document.querySelector(".color-button");
 colorButton.addEventListener("click", function (e) {
-  changeBackground()
-  e.preventDefault()
-})
+  changeBackground();
+  e.preventDefault();
+});
 
 function changeBackground() {
-  toggleButton = !toggleButton
-  if(toggleButton) {
-    body.style.background = '#05E3EE'
-  } else {
-    body.style.background = '#AFDCFB'
-  }
+  const colors = [
+    "#aed6f1",
+    "#76d7c4",
+    "#f7dc6f",
+    "#f8c471",
+    "#e74c3c",
+    "#f1c40f",
+    "#c39bd3",
+    "#a569bd",
+    "#45b39d",
+    "#28b463",
+    "#eb984e",
+    "#27ae60",
+    "#05E3EE",
+    "#3498db",
+    "#dc7633",
+    "#f1c40f",
+    "#0ad4d4",
+    "#5811a4",
+    "#9437f7",
+    "#d81b06",
+    "#fb311a",
+    "#74fb1a",
+    "#e4fb1a",
+    "#1a55fb",
+    "#25418f",
+    "#05098a",
+    "#1212e0",
+    "#f41005"
+  ];
+  let newColor = colors[Math.floor(Math.random() * colors.length)];
+  body.style.background = newColor;
 }
 
 startTime();
