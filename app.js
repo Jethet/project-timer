@@ -78,7 +78,7 @@ function runTime() {
       alert("The set time has elapsed");
     }, 500);
     setTimeout(function () {
-      alert("Icon made by Flat Icons from www.flaticon.com")
+      alert("Icon made by Flat Icons (www.flaticon.com). Font: open source Recurso Sans and GNU Unifont (Roman Czyborra and Paul Hardy).")
     }, 1000)
   }
 }
@@ -131,7 +131,8 @@ function changeBackground() {
     "#25418f",
     "#05098a",
     "#1212e0",
-    "#f41005"
+    "#f41005",
+    "#FFC300", 
   ];
   let newColor = colors[Math.floor(Math.random() * colors.length)];
   body.style.background = newColor;
