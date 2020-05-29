@@ -75,7 +75,7 @@ function runTime() {
     alertSound = new Audio("./audio/windchimes.wav");
     alertSound.play();
     setTimeout(function () {
-      alert("The set time has elapsed");
+      alert("The time has elapsed");
     }, 500);
     setTimeout(function () {
       alert("Icon made by Flat Icons (www.flaticon.com). Font: open source Recurso Sans and GNU Unifont (Roman Czyborra and Paul Hardy).")
