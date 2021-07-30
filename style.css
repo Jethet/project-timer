@@ -8,8 +8,8 @@
 }
 
 .timer-body {
-  min-width: 225px;
-  min-height: 225;
+  min-width: 210px;
+  min-height: 210px;
   background:#05E3EE;
   padding: 20px 25px;
   border-radius: 50%;
@@ -26,12 +26,14 @@
   display: flex;
   justify-content: center;
   margin: 0;
+  margin-bottom: -3px;
 }
 
 .timer-current {
   display: flex;
   justify-content: center;
   margin: 0;
+  margin-bottom: -4px;
 }
 
 #current-time {
@@ -47,11 +49,15 @@
 .timer-setting h3 {
   display: flex;
   justify-content: center;
+  margin-bottom: 10px;
+
 }
 
 .timer-input {
   display: flex;
   justify-content: center;
+  margin-bottom: -3px;
+
 }
 
 #number {
